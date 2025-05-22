@@ -1,0 +1,101 @@
+RoomID,RoomType,Department,Capacity,OccupancyStatus
+ROOM-001,ICU,ICU,1,Under Maintenance
+ROOM-002,Ward,Ward,3,Available
+ROOM-003,Emergency,Emergency,1,Under Maintenance
+ROOM-004,Diagnostics,Diagnostics,1,Under Maintenance
+ROOM-005,Surgery,Surgery,1,Available
+ROOM-006,ICU,ICU,2,Available
+ROOM-007,Diagnostics,Diagnostics,1,Under Maintenance
+ROOM-008,Emergency,Emergency,4,Available
+ROOM-009,Surgery,Surgery,3,Available
+ROOM-010,Emergency,Emergency,4,Occupied
+ROOM-011,Ward,Ward,3,Available
+ROOM-012,Ward,Ward,2,Available
+ROOM-013,Surgery,Surgery,1,Occupied
+ROOM-014,Ward,Ward,6,Occupied
+ROOM-015,ICU,ICU,4,Under Maintenance
+ROOM-016,ICU,ICU,4,Available
+ROOM-017,Diagnostics,Diagnostics,3,Under Maintenance
+ROOM-018,Diagnostics,Diagnostics,3,Under Maintenance
+ROOM-019,Emergency,Emergency,1,Available
+ROOM-020,Emergency,Emergency,3,Available
+ROOM-021,Emergency,Emergency,1,Occupied
+ROOM-022,Ward,Ward,5,Under Maintenance
+ROOM-023,Ward,Ward,3,Occupied
+ROOM-024,Ward,Ward,3,Under Maintenance
+ROOM-025,Ward,Ward,7,Under Maintenance
+ROOM-026,ICU,ICU,2,Under Maintenance
+ROOM-027,Emergency,Emergency,2,Occupied
+ROOM-028,Surgery,Surgery,3,Under Maintenance
+ROOM-029,Diagnostics,Diagnostics,2,Under Maintenance
+ROOM-030,Ward,Ward,8,Available
+ROOM-031,Emergency,Emergency,1,Occupied
+ROOM-032,Surgery,Surgery,3,Available
+ROOM-033,Emergency,Emergency,3,Available
+ROOM-034,Surgery,Surgery,4,Under Maintenance
+ROOM-035,Surgery,Surgery,2,Occupied
+ROOM-036,Emergency,Emergency,2,Under Maintenance
+ROOM-037,Diagnostics,Diagnostics,3,Under Maintenance
+ROOM-038,Diagnostics,Diagnostics,4,Under Maintenance
+ROOM-039,Surgery,Surgery,3,Available
+ROOM-040,Emergency,Emergency,4,Available
+ROOM-041,ICU,ICU,1,Available
+ROOM-042,Emergency,Emergency,4,Under Maintenance
+ROOM-043,ICU,ICU,4,Occupied
+ROOM-044,Diagnostics,Diagnostics,4,Under Maintenance
+ROOM-045,Ward,Ward,6,Available
+ROOM-046,ICU,ICU,3,Under Maintenance
+ROOM-047,Ward,Ward,2,Occupied
+ROOM-048,Surgery,Surgery,2,Occupied
+ROOM-049,ICU,ICU,3,Under Maintenance
+ROOM-050,Emergency,Emergency,1,Under Maintenance
+ROOM-051,Ward,Ward,8,Under Maintenance
+ROOM-052,Diagnostics,Diagnostics,2,Available
+ROOM-053,Ward,Ward,8,Available
+ROOM-054,Diagnostics,Diagnostics,1,Under Maintenance
+ROOM-055,Ward,Ward,5,Available
+ROOM-056,ICU,ICU,3,Occupied
+ROOM-057,Emergency,Emergency,1,Available
+ROOM-058,Diagnostics,Diagnostics,1,Available
+ROOM-059,Surgery,Surgery,1,Under Maintenance
+ROOM-060,Emergency,Emergency,2,Under Maintenance
+ROOM-061,Surgery,Surgery,2,Occupied
+ROOM-062,Diagnostics,Diagnostics,4,Available
+ROOM-063,Diagnostics,Diagnostics,2,Under Maintenance
+ROOM-064,Ward,Ward,5,Under Maintenance
+ROOM-065,Ward,Ward,5,Under Maintenance
+ROOM-066,Surgery,Surgery,1,Available
+ROOM-067,Emergency,Emergency,1,Occupied
+ROOM-068,ICU,ICU,2,Under Maintenance
+ROOM-069,Emergency,Emergency,1,Available
+ROOM-070,ICU,ICU,2,Available
+ROOM-071,ICU,ICU,3,Available
+ROOM-072,Diagnostics,Diagnostics,2,Occupied
+ROOM-073,Surgery,Surgery,2,Under Maintenance
+ROOM-074,Emergency,Emergency,4,Available
+ROOM-075,Surgery,Surgery,4,Available
+ROOM-076,ICU,ICU,1,Under Maintenance
+ROOM-077,Surgery,Surgery,3,Occupied
+ROOM-078,Surgery,Surgery,4,Under Maintenance
+ROOM-079,ICU,ICU,1,Available
+ROOM-080,Surgery,Surgery,3,Available
+ROOM-081,Emergency,Emergency,2,Available
+ROOM-082,Diagnostics,Diagnostics,4,Available
+ROOM-083,Surgery,Surgery,2,Occupied
+ROOM-084,Surgery,Surgery,2,Available
+ROOM-085,Surgery,Surgery,1,Available
+ROOM-086,Diagnostics,Diagnostics,1,Available
+ROOM-087,Emergency,Emergency,2,Occupied
+ROOM-088,Surgery,Surgery,4,Available
+ROOM-089,Surgery,Surgery,1,Available
+ROOM-090,Surgery,Surgery,1,Occupied
+ROOM-091,Ward,Ward,8,Occupied
+ROOM-092,Ward,Ward,5,Under Maintenance
+ROOM-093,Diagnostics,Diagnostics,4,Available
+ROOM-094,Emergency,Emergency,3,Available
+ROOM-095,ICU,ICU,1,Under Maintenance
+ROOM-096,Ward,Ward,2,Available
+ROOM-097,Diagnostics,Diagnostics,4,Under Maintenance
+ROOM-098,Diagnostics,Diagnostics,2,Available
+ROOM-099,Diagnostics,Diagnostics,1,Available
+ROOM-100,ICU,ICU,1,Under Maintenance
