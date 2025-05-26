@@ -1,0 +1,107 @@
+table clinic_visits
+	lineageTag: 31cd8495-fe87-4585-a56c-0400210ab6eb
+	sourceLineageTag: [dbo].[clinic_visits]
+
+	column VisitID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 23c6b7c2-ad85-402a-98f8-072b39ed3f93
+		sourceLineageTag: VisitID
+		summarizeBy: none
+		sourceColumn: VisitID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PatientID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 97d47043-e276-4b5b-b332-2d6ee678240d
+		sourceLineageTag: PatientID
+		summarizeBy: none
+		sourceColumn: PatientID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DoctorID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ca716186-34c7-4238-b827-c1e893d7e4b2
+		sourceLineageTag: DoctorID
+		summarizeBy: none
+		sourceColumn: DoctorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VisitDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 3dd9a0df-6120-4029-bcfa-1efdcf11585d
+		sourceLineageTag: VisitDate
+		summarizeBy: none
+		sourceColumn: VisitDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1605a560-0fe7-41b4-9c89-cb8d12953f39
+		sourceLineageTag: Department
+		summarizeBy: none
+		sourceColumn: Department
+
+		annotation SummarizationSetBy = Automatic
+
+	column Reason
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 53b5ff93-4d73-43a7-a994-c8d1a3afe5ee
+		sourceLineageTag: Reason
+		summarizeBy: none
+		sourceColumn: Reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column DurationMinutes
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d841e384-cdd4-4403-8a50-8fca517d096c
+		sourceLineageTag: DurationMinutes
+		summarizeBy: sum
+		sourceColumn: DurationMinutes
+
+		annotation SummarizationSetBy = Automatic
+
+	column VisitOutcome
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c6ff054c-b226-4c3e-b85a-a135abc299f7
+		sourceLineageTag: VisitOutcome
+		summarizeBy: none
+		sourceColumn: VisitOutcome
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillingAmount
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 0cf88858-4f9b-48d5-9c85-0812798be62f
+		sourceLineageTag: BillingAmount
+		summarizeBy: sum
+		sourceColumn: BillingAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition clinic_visits = entity
+		mode: directLake
+		source
+			entityName: clinic_visits
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

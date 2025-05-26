@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Patient-Doctor-Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "647df02c-03cd-90f8-418a-55fc5d73d1e8"
+  }
+}

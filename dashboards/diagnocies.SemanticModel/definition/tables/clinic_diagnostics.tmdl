@@ -1,0 +1,83 @@
+table clinic_diagnostics
+	lineageTag: 45754bcd-ba9b-459c-aa7e-fd31805fac35
+
+	column TestID
+		dataType: string
+		lineageTag: 711ed7a7-1601-4573-ae72-c6f8083bc163
+		summarizeBy: none
+		sourceColumn: TestID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PatientID
+		dataType: string
+		lineageTag: 9b6fa344-30c7-4e6d-814d-cd6869a791be
+		summarizeBy: none
+		sourceColumn: PatientID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TestType
+		dataType: string
+		lineageTag: bf6d0c03-720f-494e-bc6c-5c1cb8382ab6
+		summarizeBy: none
+		sourceColumn: TestType
+
+		annotation SummarizationSetBy = Automatic
+
+	column TestDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cfd8627b-84b5-4cc8-8eb4-ee6d94232bd4
+		summarizeBy: none
+		sourceColumn: TestDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Result
+		dataType: string
+		lineageTag: 5598ea01-732a-4a19-96ec-deec275f2747
+		summarizeBy: none
+		sourceColumn: Result
+
+		annotation SummarizationSetBy = Automatic
+
+	column PerformedBy
+		dataType: string
+		lineageTag: 5aab38f8-a0d9-4ade-bdf0-ac8ccfeb6f13
+		summarizeBy: none
+		sourceColumn: PerformedBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column LabName
+		dataType: string
+		lineageTag: b2582e71-acb0-42d8-b8a1-6656fcd14fb7
+		summarizeBy: none
+		sourceColumn: LabName
+
+		annotation SummarizationSetBy = Automatic
+
+	column TurnaroundHours
+		dataType: int64
+		formatString: 0
+		lineageTag: 47aceb3e-0d14-483f-87b8-e5f55999b3b7
+		summarizeBy: sum
+		sourceColumn: TurnaroundHours
+
+		annotation SummarizationSetBy = Automatic
+
+	partition clinic_diagnostics = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\olawa\Team_Analytics Dropbox\ola\PC\Downloads\clinic_diagnostics.csv"),[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"TestID", type text}, {"PatientID", type text}, {"TestType", type text}, {"TestDate", type datetime}, {"Result", type text}, {"PerformedBy", type text}, {"LabName", type text}, {"TurnaroundHours", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

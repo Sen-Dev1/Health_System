@@ -1,0 +1,527 @@
+{
+  "config": "{\"version\":\"5.64\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2},\"customTheme\":{\"name\":\"Copilot_Theme10643883432929468.json\",\"version\":\"5.64\",\"type\":1}},\"activeSectionIndex\":6,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "Copilot_Theme10643883432929468.json",
+            "path": "Copilot_Theme10643883432929468.json",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Visit Duration by Department (Isolation Forest)",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "027dcf248439abb6b5c9",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0f64819003a55681ac37\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.160305343511451,\"y\":0,\"z\":0,\"width\":1271.4503816793895,\"height\":720.0000000000001,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pythonVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"clinic_visits.VisitDate\"},{\"queryRef\":\"Sum(clinic_visits.DurationMinutes)\"},{\"queryRef\":\"clinic_visits.Department\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"},\"Name\":\"clinic_visits.VisitDate\",\"NativeReferenceName\":\"VisitDate\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DurationMinutes\"}},\"Function\":0},\"Name\":\"Sum(clinic_visits.DurationMinutes)\",\"NativeReferenceName\":\" DurationMinutes\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Department\"},\"Name\":\"clinic_visits.Department\",\"NativeReferenceName\":\"Department\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"}}}]},\"columnProperties\":{\"Sum(clinic_visits.DurationMinutes)\":{\"displayName\":\" DurationMinutes\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"script\":[{\"properties\":{\"source\":{\"expr\":{\"Literal\":{\"Value\":\"'# The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: \\n\\n# dataset = pandas.DataFrame(VisitDate, DurationMinutes, Department)\\n# dataset = dataset.drop_duplicates()\\n\\n# Paste or type your script code here:\\n\\n\\nimport pandas as pd\\nimport matplotlib.pyplot as plt\\nfrom sklearn.ensemble import IsolationForest\\n\\ndf = dataset.copy()\\ndf.columns = df.columns.str.strip()\\ndf = df.dropna(subset=[''VisitDate'', ''DurationMinutes'', ''Department''])\\n\\ndf[''VisitDate''] = pd.to_datetime(df[''VisitDate''], errors=''coerce'')\\ndf[''DurationMinutes''] = pd.to_numeric(df[''DurationMinutes''], errors=''coerce'')\\n\\n# Group by department and flag anomalies within each group\\ndf[''anomaly''] = 0\\nfor dept in df[''Department''].unique():\\n    temp = df[df[''Department''] == dept]\\n    if len(temp) > 10:\\n        model = IsolationForest(contamination=0.05, random_state=42)\\n        df.loc[temp.index, ''anomaly''] = model.fit_predict(temp[[''DurationMinutes'']])\\n\\nplt.figure(figsize=(10,5))\\nfor dept in df[''Department''].unique():\\n    subset = df[df[''Department''] == dept]\\n    plt.plot(subset[''VisitDate''], subset[''DurationMinutes''], alpha=0.3, label=f\\\"{dept}\\\")\\n    anomalies = subset[subset[''anomaly''] == -1]\\n    plt.scatter(anomalies[''VisitDate''], anomalies[''DurationMinutes''], label=f\\\"Anomaly in {dept}\\\", color=''red'')\\n\\nplt.legend()\\nplt.title(\\\"Anomalous Visit Durations by Department\\\")\\nplt.xlabel(\\\"Date\\\")\\nplt.ylabel(\\\"Duration (minutes)\\\")\\nplt.tight_layout()\\nplt.show()\\n'\"}}},\"provider\":{\"expr\":{\"Literal\":{\"Value\":\"'Python'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1271.45,
+          "x": 9.16,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Doctor's efficiency",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "6c3afe57dd4199c2b4d1",
+      "ordinal": 6,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"bb8361d82dc79900c4de\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.160305343511451,\"y\":0,\"z\":0,\"width\":1271.4503816793895,\"height\":720.0000000000001,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pythonVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"clinic_visits.DoctorID\"},{\"queryRef\":\"clinic_visits.PatientID\"},{\"queryRef\":\"Sum(clinic_visits.DurationMinutes)\"},{\"queryRef\":\"Sum(clinic_visits.BillingAmount)\"},{\"queryRef\":\"clinic_doctors.DoctorID\"},{\"queryRef\":\"clinic_doctors.Department\"},{\"queryRef\":\"clinic_patients.PatientID\"},{\"queryRef\":\"clinic_patients.DateOfBirth\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0},{\"Name\":\"c1\",\"Entity\":\"clinic_doctors\",\"Type\":0},{\"Name\":\"c2\",\"Entity\":\"clinic_patients\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DoctorID\"},\"Name\":\"clinic_visits.DoctorID\",\"NativeReferenceName\":\"DoctorID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"PatientID\"},\"Name\":\"clinic_visits.PatientID\",\"NativeReferenceName\":\"PatientID\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DurationMinutes\"}},\"Function\":0},\"Name\":\"Sum(clinic_visits.DurationMinutes)\",\"NativeReferenceName\":\" Duration in Minutes\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"BillingAmount\"}},\"Function\":0},\"Name\":\"Sum(clinic_visits.BillingAmount)\",\"NativeReferenceName\":\"Billing Amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"DoctorID\"},\"Name\":\"clinic_doctors.DoctorID\",\"NativeReferenceName\":\"DoctorID1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"Department\"},\"Name\":\"clinic_doctors.Department\",\"NativeReferenceName\":\"Department\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c2\"}},\"Property\":\"PatientID\"},\"Name\":\"clinic_patients.PatientID\",\"NativeReferenceName\":\"PatientID1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c2\"}},\"Property\":\"DateOfBirth\"},\"Name\":\"clinic_patients.DateOfBirth\",\"NativeReferenceName\":\"Date Of Birth\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DoctorID\"}}}]},\"columnProperties\":{\"Sum(clinic_visits.DurationMinutes)\":{\"displayName\":\" Duration in Minutes\"},\"Sum(clinic_visits.BillingAmount)\":{\"displayName\":\"Billing Amount\"},\"clinic_patients.DateOfBirth\":{\"displayName\":\"Date Of Birth\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"script\":[{\"properties\":{\"source\":{\"expr\":{\"Literal\":{\"Value\":\"'# The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: \\n\\n# dataset = pandas.DataFrame(DoctorID, PatientID, DurationMinutes, BillingAmount, DoctorID.1, Department, PatientID.1, DateOfBirth)\\n# dataset = dataset.drop_duplicates()\\n\\n# Paste or type your script code here:\\n\\n\\nimport pandas as pd\\nimport matplotlib.pyplot as plt\\nimport seaborn as sns\\nfrom datetime import datetime\\n\\ndf = dataset.copy()\\ndf.columns = df.columns.str.strip()\\n\\n# Convert to correct types\\ndf[''DurationMinutes''] = pd.to_numeric(df[''DurationMinutes''], errors=''coerce'')\\ndf[''BillingAmount''] = pd.to_numeric(df[''BillingAmount''], errors=''coerce'')\\ndf[''DateOfBirth''] = pd.to_datetime(df[''DateOfBirth''], errors=''coerce'')\\n\\n# Calculate patient age\\ntoday = pd.Timestamp(''now'')\\ndf[''Age''] = df[''DateOfBirth''].apply(lambda dob: (today - dob).days // 365 if pd.notnull(dob) else None)\\n\\n# Drop rows with missing data\\ndf = df.dropna(subset=[''DoctorID'', ''PatientID'', ''DurationMinutes'', ''BillingAmount'', ''Age'', ''Department''])\\n\\n# Aggregate by doctor\\nagg = df.groupby([''DoctorID'', ''Department'']).agg({\\n    ''DurationMinutes'': ''mean'',\\n    ''BillingAmount'': ''mean'',\\n    ''Age'': ''mean''\\n}).reset_index()\\n\\n# Rename for clarity\\nagg.rename(columns={\\n    ''DurationMinutes'': ''AvgDuration'',\\n    ''BillingAmount'': ''AvgBilling'',\\n    ''Age'': ''AvgPatientAge''\\n}, inplace=True)\\n\\n# Plot\\nplt.figure(figsize=(12, 6))\\nsns.scatterplot(\\n    data=agg,\\n    x=''AvgPatientAge'',\\n    y=''AvgDuration'',\\n    size=''AvgBilling'',\\n    hue=''Department'',\\n    sizes=(50, 1000),\\n    alpha=0.7,\\n    edgecolor=''black'',\\n    palette=''Set2''\\n)\\n\\nplt.title(\\\"Doctor Efficiency vs Patient Age vs Billing Impact\\\")\\nplt.xlabel(\\\"Average Patient Age\\\")\\nplt.ylabel(\\\"Average Visit Duration (minutes)\\\")\\nplt.legend(bbox_to_anchor=(1.05, 1), loc=''upper left'')\\nplt.grid(True)\\nplt.tight_layout()\\nplt.show()\\n'\"}}},\"provider\":{\"expr\":{\"Literal\":{\"Value\":\"'Python'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1271.45,
+          "x": 9.16,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"60L\"}}}}}]},\"howCreated\":\"Copilot\"}",
+      "displayName": "Doctor Performance Metrics",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "bbdbe922c0d052b01da9",
+      "ordinal": 7,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0041edea5058eec06129\",\"layouts\":[{\"id\":0,\"position\":{\"height\":36,\"width\":160,\"x\":1100,\"y\":6,\"tabOrder\":10000,\"z\":10000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"clinic_doctors.Department\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_doctors\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Department\"},\"Name\":\"clinic_doctors.Department\",\"NativeReferenceName\":\"Department\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}]},\"vcObjects\":{}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 36.00,
+          "width": 160.00,
+          "x": 1100.00,
+          "y": 6.00,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"1c460e3410728993cacb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":60,\"y\":6,\"height\":40,\"width\":312,\"tabOrder\":11000,\"z\":11000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Doctor Performance Metrics\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"14pt\",\"fontWeight\":\"bold\"}}]}]}}]},\"vcObjects\":{}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 312.00,
+          "x": 60.00,
+          "y": 6.00,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"5b7227202636e8090d49\",\"layouts\":[{\"id\":0,\"position\":{\"width\":576,\"height\":240,\"x\":60,\"y\":172,\"tabOrder\":4000,\"z\":4000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_visits.Department\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(clinic_visits.VisitID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Department\"},\"Name\":\"clinic_visits.Department\",\"NativeReferenceName\":\"Department\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitID\"}},\"Function\":5},\"Name\":\"CountNonNull(clinic_visits.VisitID)\",\"NativeReferenceName\":\"Count of VisitID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Visits by Department'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 576.00,
+          "x": 60.00,
+          "y": 172.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"7f68b5be08d9500e2840\",\"layouts\":[{\"id\":0,\"position\":{\"width\":576,\"height\":240,\"x\":644,\"y\":172,\"tabOrder\":2000,\"z\":2000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_visits.Department\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(clinic_visits.BillingAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Department\"},\"Name\":\"clinic_visits.Department\",\"NativeReferenceName\":\"Department\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"BillingAmount\"}},\"Function\":0},\"Name\":\"Sum(clinic_visits.BillingAmount)\",\"NativeReferenceName\":\"Sum of BillingAmount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"BillingAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Billing Amount by Department'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 576.00,
+          "x": 644.00,
+          "y": 172.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"839f102bc2266be3934a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":10,\"height\":28,\"width\":28,\"tabOrder\":12000,\"z\":12000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"Literal\":{\"Value\":\"'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAnIGhlaWdodD0nMjAnIHZpZXdCb3g9JzAgMCAyMCAyMCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTIgNC41QzEyIDMuNjcxNTcgMTEuMzI4NCAzIDEwLjUgM0g5LjVDOC42NzE1NyAzIDggMy42NzE1NyA4IDQuNVYxN0gxMlY0LjVaTTEzIDZWMTdIMTYuNUMxNi43NzYxIDE3IDE3IDE2Ljc3NjEgMTcgMTYuNVY4QzE3IDYuODk1NDMgMTYuMTA0NiA2IDE1IDZIMTNaTTUgOUg3VjE3SDMuNUMzLjIyMzg2IDE3IDMgMTYuNzc2MSAzIDE2LjVWMTFDMyA5Ljg5NTQzIDMuODk1NDMgOSA1IDlaJyBmaWxsPSd3aGl0ZScvPjwvc3ZnPgo='\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}}}}],\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}},\"left\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"right\":{\"expr\":{\"Literal\":{\"Value\":\"5L\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 28.00,
+          "width": 28.00,
+          "x": 20.00,
+          "y": 10.00,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"95ba74aa9bd06d6a44aa\",\"layouts\":[{\"id\":0,\"position\":{\"x\":60,\"y\":72,\"height\":92,\"width\":580,\"tabOrder\":6000,\"z\":6000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"CountNonNull(clinic_visits.VisitID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitID\"}},\"Function\":5},\"Name\":\"CountNonNull(clinic_visits.VisitID)\",\"NativeReferenceName\":\"Count of VisitID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"accentBar\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}}}}},\"selector\":{\"metadata\":\"CountNonNull(clinic_visits.VisitID)\"}}],\"layout\":[{\"properties\":{\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Visits'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 92.00,
+          "width": 580.00,
+          "x": 60.00,
+          "y": 72.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"a5a93f99db089de6817d\",\"layouts\":[{\"id\":0,\"position\":{\"height\":32,\"width\":78,\"x\":748,\"y\":10,\"tabOrder\":7000,\"z\":7000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"DoctorID\",\"textStyle\":{\"fontSize\":\"10pt\"}}],\"horizontalTextAlignment\":\"right\"}]}}]},\"vcObjects\":{}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 32.00,
+          "width": 78.00,
+          "x": 748.00,
+          "y": 10.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"cf2628dadda2c465deb0\",\"layouts\":[{\"id\":0,\"position\":{\"height\":32,\"width\":98,\"x\":1002,\"y\":10,\"tabOrder\":9000,\"z\":9000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Department\",\"textStyle\":{\"fontSize\":\"10pt\"}}],\"horizontalTextAlignment\":\"right\"}]}}]},\"vcObjects\":{}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 32.00,
+          "width": 98.00,
+          "x": 1002.00,
+          "y": 10.00,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"e33774b01711a2993c3d\",\"layouts\":[{\"id\":0,\"position\":{\"width\":576,\"height\":240,\"x\":60,\"y\":420,\"tabOrder\":3000,\"z\":3000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_visits.VisitDate\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(clinic_visits.VisitID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"},\"Name\":\"clinic_visits.VisitDate\",\"NativeReferenceName\":\"VisitDate\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitID\"}},\"Function\":5},\"Name\":\"CountNonNull(clinic_visits.VisitID)\",\"NativeReferenceName\":\"Count of VisitID\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"CountNonNull(clinic_visits.VisitID)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Visits Over Time'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 576.00,
+          "x": 60.00,
+          "y": 420.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"ebc15b0b4a193ab497b3\",\"layouts\":[{\"id\":0,\"position\":{\"width\":576,\"height\":240,\"x\":644,\"y\":420,\"tabOrder\":1000,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_visits.VisitDate\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(clinic_visits.BillingAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"},\"Name\":\"clinic_visits.VisitDate\",\"NativeReferenceName\":\"VisitDate\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"BillingAmount\"}},\"Function\":0},\"Name\":\"Sum(clinic_visits.BillingAmount)\",\"NativeReferenceName\":\"Sum of BillingAmount\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Sum(clinic_visits.BillingAmount)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Billing Amount Over Time'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 576.00,
+          "x": 644.00,
+          "y": 420.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f00f2ab6644955d2aa34\",\"layouts\":[{\"id\":0,\"position\":{\"x\":644,\"y\":72,\"height\":92,\"width\":576,\"tabOrder\":5000,\"z\":5000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(clinic_visits.BillingAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"BillingAmount\"}},\"Function\":0},\"Name\":\"Sum(clinic_visits.BillingAmount)\",\"NativeReferenceName\":\"Sum of BillingAmount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"BillingAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"accentBar\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}}}}},\"selector\":{\"metadata\":\"Sum(clinic_visits.BillingAmount)\"}}],\"layout\":[{\"properties\":{\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Billing Amount'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 92.00,
+          "width": 576.00,
+          "x": 644.00,
+          "y": 72.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"f9594cf509152e55de66\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"height\":48,\"width\":1280,\"tabOrder\":-1000,\"z\":0}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"fill\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#A6ADC6'\"}}}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'Custom'\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"5L\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"90L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"85L\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#E0E0E0'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 48.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"fa360a058dcb4e43b4c4\",\"layouts\":[{\"id\":0,\"position\":{\"height\":36,\"width\":160,\"x\":826,\"y\":6,\"tabOrder\":8000,\"z\":8000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"clinic_doctors.DoctorID\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_doctors\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DoctorID\"},\"Name\":\"clinic_doctors.DoctorID\",\"NativeReferenceName\":\"DoctorID\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{}}]},\"vcObjects\":{}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 36.00,
+          "width": 160.00,
+          "x": 826.00,
+          "y": 6.00,
+          "z": 8000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Diagnostic Test Load Spikes (Z-Score)",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "bd0e2c61130be6090b5e",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"71e45619ca5aeb740d71\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.160305343511451,\"y\":0,\"z\":0,\"width\":1271.4503816793895,\"height\":720.0000000000001,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pythonVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"clinic_diagnostics.TestDate\"},{\"queryRef\":\"clinic_diagnostics.TestType\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_diagnostics\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TestDate\"},\"Name\":\"clinic_diagnostics.TestDate\",\"NativeReferenceName\":\"Test Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TestType\"},\"Name\":\"clinic_diagnostics.TestType\",\"NativeReferenceName\":\"Test Type\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TestDate\"}}}]},\"columnProperties\":{\"clinic_diagnostics.TestDate\":{\"displayName\":\"Test Date\"},\"clinic_diagnostics.TestType\":{\"displayName\":\"Test Type\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"script\":[{\"properties\":{\"source\":{\"expr\":{\"Literal\":{\"Value\":\"'# The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: \\n\\n# dataset = pandas.DataFrame(TestDate, TestType)\\n# dataset = dataset.drop_duplicates()\\n\\n# Paste or type your script code here:\\n\\n\\nimport pandas as pd\\nimport matplotlib.pyplot as plt\\nfrom scipy.stats import zscore\\n\\ndf = dataset.copy()\\ndf.columns = df.columns.str.strip()\\ndf[''TestDate''] = pd.to_datetime(df[''TestDate''], errors=''coerce'')\\ndf = df.dropna(subset=[''TestDate'', ''TestType''])\\n\\n# Daily test count\\ndf[''TestDate''] = df[''TestDate''].dt.date\\ndaily_counts = df.groupby([''TestDate'', ''TestType'']).size().reset_index(name=''TestCount'')\\n\\n# Z-score to detect spikes\\ndaily_counts[''ZScore''] = daily_counts.groupby(''TestType'')[''TestCount''].transform(lambda x: zscore(x, ddof=0))\\ndaily_counts[''Anomaly''] = daily_counts[''ZScore''].abs() > 2.5\\n\\nplt.figure(figsize=(12, 5))\\nfor test_type in daily_counts[''TestType''].unique():\\n    temp = daily_counts[daily_counts[''TestType''] == test_type]\\n    plt.plot(temp[''TestDate''], temp[''TestCount''], label=f\\\"{test_type}\\\", alpha=0.5)\\n    spikes = temp[temp[''Anomaly'']]\\n    plt.scatter(spikes[''TestDate''], spikes[''TestCount''], color=''red'', label=f\\\"Spike: {test_type}\\\")\\n\\nplt.legend()\\nplt.title(\\\"Diagnostic Test Load Anomalies\\\")\\nplt.xlabel(\\\"Date\\\")\\nplt.ylabel(\\\"Test Volume\\\")\\nplt.tight_layout()\\nplt.show()'\"}}},\"provider\":{\"expr\":{\"Literal\":{\"Value\":\"'Python'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Heading2'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1271.45,
+          "x": 9.16,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "c169327c3a6e3c9e3ce7",
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2491e521d1b177042be9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.160305343511451,\"y\":0,\"z\":0,\"width\":1271.4503816793895,\"height\":720.0000000000001,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pythonVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"clinic_visits.DoctorID\"},{\"queryRef\":\"Sum(clinic_visits.DurationMinutes)\"},{\"queryRef\":\"clinic_visits.VisitDate\"},{\"queryRef\":\"clinic_doctors.DoctorID\"},{\"queryRef\":\"clinic_doctors.Specialty\"},{\"queryRef\":\"clinic_doctors.Department\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0},{\"Name\":\"c1\",\"Entity\":\"clinic_doctors\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DoctorID\"},\"Name\":\"clinic_visits.DoctorID\",\"NativeReferenceName\":\"DoctorID\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DurationMinutes\"}},\"Function\":0},\"Name\":\"Sum(clinic_visits.DurationMinutes)\",\"NativeReferenceName\":\"Total  Duration in Minutes\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"},\"Name\":\"clinic_visits.VisitDate\",\"NativeReferenceName\":\"Visit Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"DoctorID\"},\"Name\":\"clinic_doctors.DoctorID\",\"NativeReferenceName\":\"DoctorID1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"Specialty\"},\"Name\":\"clinic_doctors.Specialty\",\"NativeReferenceName\":\"Specialty\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"Department\"},\"Name\":\"clinic_doctors.Department\",\"NativeReferenceName\":\"Department\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DoctorID\"}}}]},\"columnProperties\":{\"Sum(clinic_visits.DurationMinutes)\":{\"displayName\":\"Total  Duration in Minutes\"},\"clinic_visits.VisitDate\":{\"displayName\":\"Visit Date\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"script\":[{\"properties\":{\"source\":{\"expr\":{\"Literal\":{\"Value\":\"'# The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: \\n\\n# dataset = pandas.DataFrame(DoctorID, DurationMinutes, VisitDate, DoctorID.1, Specialty, Department)\\n# dataset = dataset.drop_duplicates()\\n\\n# Paste or type your script code here:\\n\\nimport pandas as pd\\nimport matplotlib.pyplot as plt\\n\\ndf = dataset.copy()\\ndf.columns = df.columns.str.strip()\\n\\n# Optional: rename for consistency\\n# df.rename(columns={''clinic_visits.DoctorID'': ''DoctorID''}, inplace=True)\\n\\n# Group by Specialty and calculate average duration\\nagg_df = df.groupby(''Specialty'')[''DurationMinutes''].mean().reset_index()\\n\\n# Plot\\nplt.figure(figsize=(10, 4))\\nplt.bar(agg_df[''Specialty''], agg_df[''DurationMinutes''], color=''skyblue'')\\nplt.title(''Average Visit Duration by Doctor Specialty'')\\nplt.ylabel(''Duration (minutes)'')\\nplt.xticks(rotation=45)\\nplt.tight_layout()\\nplt.show()\\n'\"}}},\"provider\":{\"expr\":{\"Literal\":{\"Value\":\"'Python'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1271.45,
+          "x": 9.16,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"60L\"}}}}}]}}",
+      "displayName": "Healthcare Analytics Dashboard",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "e1653005ca9d3616d0c2",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0cd74bdde185c76c6651\",\"layouts\":[{\"id\":0,\"position\":{\"width\":186,\"height\":240,\"x\":642,\"y\":172,\"tabOrder\":5000,\"z\":5000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_diagnostics.TestType\",\"active\":true}],\"Y\":[{\"queryRef\":\"Avg(clinic_diagnostics.TurnaroundHours)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_diagnostics\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TestType\"},\"Name\":\"clinic_diagnostics.TestType\",\"NativeReferenceName\":\"TestType\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TurnaroundHours\"}},\"Function\":1},\"Name\":\"Avg(clinic_diagnostics.TurnaroundHours)\",\"NativeReferenceName\":\"Average of TurnaroundHours\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TurnaroundHours\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Turnaround Times by Test Type'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 186.00,
+          "x": 642.00,
+          "y": 172.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"16d10ded4d2205286850\",\"layouts\":[{\"id\":0,\"position\":{\"x\":765,\"y\":72,\"height\":92,\"width\":227,\"tabOrder\":13000,\"z\":13000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Avg(clinic_diagnostics.TurnaroundHours)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_diagnostics\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TurnaroundHours\"}},\"Function\":1},\"Name\":\"Avg(clinic_diagnostics.TurnaroundHours)\",\"NativeReferenceName\":\"Average of TurnaroundHours\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TurnaroundHours\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"accentBar\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}}}}},\"selector\":{\"metadata\":\"Avg(clinic_diagnostics.TurnaroundHours)\"}}],\"layout\":[{\"properties\":{\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Test Turnaround Times'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 92.00,
+          "width": 227.00,
+          "x": 765.00,
+          "y": 72.00,
+          "z": 13000.00
+        },
+        {
+          "config": "{\"name\":\"238f7088600727d3b199\",\"layouts\":[{\"id\":0,\"position\":{\"height\":36,\"width\":160,\"x\":826,\"y\":6,\"tabOrder\":20000,\"z\":20000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"clinic_doctors.FullName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_doctors\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"FullName\"},\"Name\":\"clinic_doctors.FullName\",\"NativeReferenceName\":\"FullName\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 36.00,
+          "width": 160.00,
+          "x": 826.00,
+          "y": 6.00,
+          "z": 20000.00
+        },
+        {
+          "config": "{\"name\":\"2c03dbdda9bc7942b0ed\",\"layouts\":[{\"id\":0,\"position\":{\"width\":225,\"height\":240,\"x\":992,\"y\":420,\"tabOrder\":2000,\"z\":2000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_visits.VisitDate\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(clinic_visits.BillingAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"},\"Name\":\"clinic_visits.VisitDate\",\"NativeReferenceName\":\"VisitDate\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"BillingAmount\"}},\"Function\":0},\"Name\":\"Sum(clinic_visits.BillingAmount)\",\"NativeReferenceName\":\"Sum of BillingAmount\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":11,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Sum(clinic_visits.BillingAmount)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Billing Amount Over Time'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 225.00,
+          "x": 992.00,
+          "y": 420.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"3180b23a690474d04229\",\"layouts\":[{\"id\":0,\"position\":{\"width\":225,\"height\":240,\"x\":293,\"y\":420,\"tabOrder\":8000,\"z\":8000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_visits.Department\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(clinic_visits.VisitOutcome)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Department\"},\"Name\":\"clinic_visits.Department\",\"NativeReferenceName\":\"Department\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitOutcome\"}},\"Function\":5},\"Name\":\"CountNonNull(clinic_visits.VisitOutcome)\",\"NativeReferenceName\":\"Count of VisitOutcome\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitOutcome\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Visit Outcomes by Department'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 225.00,
+          "x": 293.00,
+          "y": 420.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"343a428139849a3d696c\",\"layouts\":[{\"id\":0,\"position\":{\"width\":186,\"height\":240,\"x\":60,\"y\":172,\"tabOrder\":11000,\"z\":11000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_visits.Department\",\"active\":true}],\"Y\":[{\"queryRef\":\"Avg(clinic_visits.DurationMinutes)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Department\"},\"Name\":\"clinic_visits.Department\",\"NativeReferenceName\":\"Department\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DurationMinutes\"}},\"Function\":1},\"Name\":\"Avg(clinic_visits.DurationMinutes)\",\"NativeReferenceName\":\"Average of DurationMinutes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DurationMinutes\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Wait Times by Department'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 186.00,
+          "x": 60.00,
+          "y": 172.00,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"41000331dd873e0c8094\",\"layouts\":[{\"id\":0,\"position\":{\"width\":225,\"height\":240,\"x\":60,\"y\":420,\"tabOrder\":10000,\"z\":10000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_visits.VisitDate\",\"active\":true}],\"Y\":[{\"queryRef\":\"Avg(clinic_visits.DurationMinutes)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"},\"Name\":\"clinic_visits.VisitDate\",\"NativeReferenceName\":\"VisitDate\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DurationMinutes\"}},\"Function\":1},\"Name\":\"Avg(clinic_visits.DurationMinutes)\",\"NativeReferenceName\":\"Average of DurationMinutes\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Avg(clinic_visits.DurationMinutes)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Wait Times Over Time'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 225.00,
+          "x": 60.00,
+          "y": 420.00,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"492a51f0b94e59194302\",\"layouts\":[{\"id\":0,\"position\":{\"height\":36,\"width\":160,\"x\":1100,\"y\":6,\"tabOrder\":22000,\"z\":22000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"clinic_visits.Department\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Department\"},\"Name\":\"clinic_visits.Department\",\"NativeReferenceName\":\"Department\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 36.00,
+          "width": 160.00,
+          "x": 1100.00,
+          "y": 6.00,
+          "z": 22000.00
+        },
+        {
+          "config": "{\"name\":\"4e06d39a388ea60e3664\",\"layouts\":[{\"id\":0,\"position\":{\"width\":186,\"height\":240,\"x\":836,\"y\":172,\"tabOrder\":3000,\"z\":3000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_visits.Department\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(clinic_visits.BillingAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Department\"},\"Name\":\"clinic_visits.Department\",\"NativeReferenceName\":\"Department\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"BillingAmount\"}},\"Function\":0},\"Name\":\"Sum(clinic_visits.BillingAmount)\",\"NativeReferenceName\":\"Sum of BillingAmount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"BillingAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":10,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Billing Amount by Department'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 186.00,
+          "x": 836.00,
+          "y": 172.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"5329d697d4484eb79e91\",\"layouts\":[{\"id\":0,\"position\":{\"x\":532,\"y\":72,\"height\":92,\"width\":228,\"tabOrder\":14000,\"z\":14000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"CountNonNull(clinic_visits.VisitID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitID\"}},\"Function\":5},\"Name\":\"CountNonNull(clinic_visits.VisitID)\",\"NativeReferenceName\":\"No of Visit\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitID\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(clinic_visits.VisitID)\":{\"displayName\":\"No of Visit\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"accentBar\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}}}}},\"selector\":{\"metadata\":\"CountNonNull(clinic_visits.VisitID)\"}}],\"layout\":[{\"properties\":{\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Doctor Performance'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 92.00,
+          "width": 228.00,
+          "x": 532.00,
+          "y": 72.00,
+          "z": 14000.00
+        },
+        {
+          "config": "{\"name\":\"5c1ec0b04ae4bd1310c9\",\"layouts\":[{\"id\":0,\"position\":{\"width\":186,\"height\":240,\"x\":1030,\"y\":172,\"tabOrder\":1000,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"X\":[{\"queryRef\":\"Avg(clinic_visits.DurationMinutes)\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(clinic_visits.VisitID)\"}],\"Category\":[{\"queryRef\":\"clinic_visits.VisitID\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DurationMinutes\"}},\"Function\":1},\"Name\":\"Avg(clinic_visits.DurationMinutes)\",\"NativeReferenceName\":\"Average of DurationMinutes\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitID\"}},\"Function\":5},\"Name\":\"CountNonNull(clinic_visits.VisitID)\",\"NativeReferenceName\":\"Count of VisitID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitID\"},\"Name\":\"clinic_visits.VisitID\",\"NativeReferenceName\":\"VisitID\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Anomalies in Visit Durations'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 186.00,
+          "x": 1030.00,
+          "y": 172.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"7623b7e5d7462013916d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"height\":48,\"width\":1280,\"tabOrder\":-1000,\"z\":0}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"fill\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#A6ADC6'\"}}}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'Custom'\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"5L\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"90L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"85L\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#E0E0E0'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 48.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"79ae51ccb2982e06ae50\",\"layouts\":[{\"id\":0,\"position\":{\"width\":225,\"height\":240,\"x\":759,\"y\":420,\"tabOrder\":4000,\"z\":4000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_diagnostics.TestDate\",\"active\":true}],\"Y\":[{\"queryRef\":\"Avg(clinic_diagnostics.TurnaroundHours)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_diagnostics\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TestDate\"},\"Name\":\"clinic_diagnostics.TestDate\",\"NativeReferenceName\":\"TestDate\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TurnaroundHours\"}},\"Function\":1},\"Name\":\"Avg(clinic_diagnostics.TurnaroundHours)\",\"NativeReferenceName\":\"Average of TurnaroundHours\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TestDate\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Avg(clinic_diagnostics.TurnaroundHours)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Turnaround Times Over Time'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 225.00,
+          "x": 759.00,
+          "y": 420.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"8024ae9da23b7ba2bb0b\",\"layouts\":[{\"id\":0,\"position\":{\"height\":32,\"width\":68,\"x\":504,\"y\":10,\"tabOrder\":17000,\"z\":17000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Gender\",\"textStyle\":{\"fontSize\":\"10pt\"}}],\"horizontalTextAlignment\":\"right\"}]}}]},\"vcObjects\":{}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 32.00,
+          "width": 68.00,
+          "x": 504.00,
+          "y": 10.00,
+          "z": 17000.00
+        },
+        {
+          "config": "{\"name\":\"8380bff4e77a7ccbbc90\",\"layouts\":[{\"id\":0,\"position\":{\"x\":60,\"y\":72,\"height\":92,\"width\":232,\"tabOrder\":16000,\"z\":16000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Avg(clinic_visits.DurationMinutes)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DurationMinutes\"}},\"Function\":1},\"Name\":\"Avg(clinic_visits.DurationMinutes)\",\"NativeReferenceName\":\"Average of Duration in Minutes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"DurationMinutes\"}},\"Function\":1}}}]},\"columnProperties\":{\"Avg(clinic_visits.DurationMinutes)\":{\"displayName\":\"Average of Duration in Minutes\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"accentBar\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}}}}},\"selector\":{\"metadata\":\"Avg(clinic_visits.DurationMinutes)\"}}],\"layout\":[{\"properties\":{\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average Wait Time'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 92.00,
+          "width": 232.00,
+          "x": 60.00,
+          "y": 72.00,
+          "z": 16000.00
+        },
+        {
+          "config": "{\"name\":\"87d2ee80cb9ba40302c3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":60,\"y\":6,\"height\":40,\"width\":360,\"tabOrder\":23000,\"z\":23000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Healthcare Analytics Dashboard\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"14pt\",\"fontWeight\":\"bold\"}}]}]}}]},\"vcObjects\":{}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 360.00,
+          "x": 60.00,
+          "y": 6.00,
+          "z": 23000.00
+        },
+        {
+          "config": "{\"name\":\"8dc09460b85b0847b6ea\",\"layouts\":[{\"id\":0,\"position\":{\"height\":32,\"width\":98,\"x\":1002,\"y\":10,\"tabOrder\":21000,\"z\":21000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Department\",\"textStyle\":{\"fontSize\":\"10pt\"}}],\"horizontalTextAlignment\":\"right\"}]}}]},\"vcObjects\":{}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 32.00,
+          "width": 98.00,
+          "x": 1002.00,
+          "y": 10.00,
+          "z": 21000.00
+        },
+        {
+          "config": "{\"name\":\"a3b90756d734ca637733\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":10,\"height\":28,\"width\":28,\"tabOrder\":24000,\"z\":24000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"Literal\":{\"Value\":\"'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAnIGhlaWdodD0nMjAnIHZpZXdCb3g9JzAgMCAyMCAyMCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTIgNC41QzEyIDMuNjcxNTcgMTEuMzI4NCAzIDEwLjUgM0g5LjVDOC42NzE1NyAzIDggMy42NzE1NyA4IDQuNVYxN0gxMlY0LjVaTTEzIDZWMTdIMTYuNUMxNi43NzYxIDE3IDE3IDE2Ljc3NjEgMTcgMTYuNVY4QzE3IDYuODk1NDMgMTYuMTA0NiA2IDE1IDZIMTNaTTUgOUg3VjE3SDMuNUMzLjIyMzg2IDE3IDMgMTYuNzc2MSAzIDE2LjVWMTFDMyA5Ljg5NTQzIDMuODk1NDMgOSA1IDlaJyBmaWxsPSd3aGl0ZScvPjwvc3ZnPgo='\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}}}}],\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"bottom\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}},\"left\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"right\":{\"expr\":{\"Literal\":{\"Value\":\"5L\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 28.00,
+          "width": 28.00,
+          "x": 20.00,
+          "y": 10.00,
+          "z": 24000.00
+        },
+        {
+          "config": "{\"name\":\"b3ce2f660b5871612917\",\"layouts\":[{\"id\":0,\"position\":{\"width\":225,\"height\":240,\"x\":526,\"y\":420,\"tabOrder\":6000,\"z\":6000}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_visits.VisitDate\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(clinic_visits.VisitID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"},\"Name\":\"clinic_visits.VisitDate\",\"NativeReferenceName\":\"VisitDate\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitID\"}},\"Function\":5},\"Name\":\"CountNonNull(clinic_visits.VisitID)\",\"NativeReferenceName\":\"Count of VisitID\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":7,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"CountNonNull(clinic_visits.VisitID)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Doctor Performance Over Time'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 225.00,
+          "x": 526.00,
+          "y": 420.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"b764795d05189404c9e0\",\"layouts\":[{\"id\":0,\"position\":{\"height\":32,\"width\":78,\"x\":748,\"y\":10,\"tabOrder\":19000,\"z\":19000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"FullName\",\"textStyle\":{\"fontSize\":\"10pt\"}}],\"horizontalTextAlignment\":\"right\"}]}}]},\"vcObjects\":{}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 32.00,
+          "width": 78.00,
+          "x": 748.00,
+          "y": 10.00,
+          "z": 19000.00
+        },
+        {
+          "config": "{\"name\":\"c60cafe51500083306d9\",\"layouts\":[{\"id\":0,\"position\":{\"width\":186,\"height\":240,\"x\":254,\"y\":172,\"tabOrder\":9000,\"z\":9000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_visits.VisitOutcome\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(clinic_visits.VisitOutcome)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitOutcome\"},\"Name\":\"clinic_visits.VisitOutcome\",\"NativeReferenceName\":\"VisitOutcome\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitOutcome\"}},\"Function\":5},\"Name\":\"CountNonNull(clinic_visits.VisitOutcome)\",\"NativeReferenceName\":\"Count of VisitOutcome\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitOutcome\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Visit Outcomes Distribution'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 186.00,
+          "x": 254.00,
+          "y": 172.00,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"c6256aadb90759b9ce4b\",\"layouts\":[{\"id\":0,\"position\":{\"height\":36,\"width\":160,\"x\":572,\"y\":6,\"tabOrder\":18000,\"z\":18000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"clinic_patients.Gender\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_patients\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Gender\"},\"Name\":\"clinic_patients.Gender\",\"NativeReferenceName\":\"Gender\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 36.00,
+          "width": 160.00,
+          "x": 572.00,
+          "y": 6.00,
+          "z": 18000.00
+        },
+        {
+          "config": "{\"name\":\"c9103b3316eee3ce3b68\",\"layouts\":[{\"id\":0,\"position\":{\"width\":186,\"height\":240,\"x\":448,\"y\":172,\"tabOrder\":7000,\"z\":7000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"clinic_doctors.FullName\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(clinic_visits.VisitID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_doctors\",\"Type\":0},{\"Name\":\"c1\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"FullName\"},\"Name\":\"clinic_doctors.FullName\",\"NativeReferenceName\":\"FullName\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"VisitID\"}},\"Function\":5},\"Name\":\"CountNonNull(clinic_visits.VisitID)\",\"NativeReferenceName\":\"Count of VisitID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"VisitID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Visits per Doctor'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 240.00,
+          "width": 186.00,
+          "x": 448.00,
+          "y": 172.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"dbac6bba540253399e0c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":992,\"y\":72,\"height\":92,\"width\":225,\"tabOrder\":12000,\"z\":12000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(clinic_visits.BillingAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"BillingAmount\"}},\"Function\":0},\"Name\":\"Sum(clinic_visits.BillingAmount)\",\"NativeReferenceName\":\"Total Amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"BillingAmount\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(clinic_visits.BillingAmount)\":{\"displayName\":\"Total Amount\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"accentBar\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}}}}},\"selector\":{\"metadata\":\"Sum(clinic_visits.BillingAmount)\"}}],\"layout\":[{\"properties\":{\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Billing KPIs'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 92.00,
+          "width": 225.00,
+          "x": 992.00,
+          "y": 72.00,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"ee47bc6a58785516c008\",\"layouts\":[{\"id\":0,\"position\":{\"x\":298,\"y\":72,\"height\":92,\"width\":230,\"tabOrder\":15000,\"z\":15000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"CountNonNull(clinic_visits.VisitOutcome)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitOutcome\"}},\"Function\":5},\"Name\":\"CountNonNull(clinic_visits.VisitOutcome)\",\"NativeReferenceName\":\"No of Visit Outcome\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitOutcome\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(clinic_visits.VisitOutcome)\":{\"displayName\":\"No of Visit Outcome\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"accentBar\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}}}}},\"selector\":{\"metadata\":\"CountNonNull(clinic_visits.VisitOutcome)\"}}],\"layout\":[{\"properties\":{\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Visit Outcomes'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 92.00,
+          "width": 230.00,
+          "x": 298.00,
+          "y": 72.00,
+          "z": 15000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "e9165d2d5256829e8288",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"8af200a6304eb6332276\",\"layouts\":[{\"id\":0,\"position\":{\"x\":51.29770992366413,\"y\":65.95419847328245,\"z\":0,\"width\":1192.671755725191,\"height\":566.1068702290077,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pythonVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(clinic_diagnostics.TurnaroundHours)\"},{\"queryRef\":\"clinic_diagnostics.TestDate\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_diagnostics\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TestDate\"},\"Name\":\"clinic_diagnostics.TestDate\",\"NativeReferenceName\":\"TestDate\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TurnaroundHours\"}},\"Function\":0},\"Name\":\"Sum(clinic_diagnostics.TurnaroundHours)\",\"NativeReferenceName\":\"Sum of TurnaroundHours\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"TurnaroundHours\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"script\":[{\"properties\":{\"source\":{\"expr\":{\"Literal\":{\"Value\":\"'# The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: \\n\\n# dataset = pandas.DataFrame(PatientID)\\n# dataset = dataset.drop_duplicates()\\n\\n# Paste or type your script code here:\\n\\nimport pandas as pd\\nimport matplotlib.pyplot as plt\\nfrom sklearn.ensemble import IsolationForest\\n\\n# Work with the Power BI dataset\\ndf = dataset.copy()\\ndf.columns = df.columns.str.strip()  # Clean column names\\n\\n# Rename if Power BI used spaces\\nif ''Test Date'' in df.columns:\\n    df.rename(columns={''Test Date'': ''TestDate''}, inplace=True)\\nif ''Turnaround Hours'' in df.columns:\\n    df.rename(columns={''Turnaround Hours'': ''TurnaroundHours''}, inplace=True)\\n\\n# Ensure correct types\\ndf[''TestDate''] = pd.to_datetime(df[''TestDate''], errors=''coerce'')\\ndf[''TurnaroundHours''] = pd.to_numeric(df[''TurnaroundHours''], errors=''coerce'')\\ndf = df.dropna(subset=[''TestDate'', ''TurnaroundHours''])\\n\\n# If no data after cleaning, show fallback plot\\nif df.empty:\\n    plt.figure(figsize=(6, 2))\\n    plt.text(0.5, 0.5, ''No data available'', ha=''center'', va=''center'', fontsize=12)\\n    plt.axis(''off'')\\n    plt.title(''Anomaly Detection Result'')\\n    plt.show()\\nelse:\\n    # Anomaly detection\\n    model = IsolationForest(contamination=0.05, random_state=42)\\n    df[''anomaly''] = model.fit_predict(df[[''TurnaroundHours'']])\\n\\n    # Plot results\\n    plt.figure(figsize=(10, 4))\\n    plt.plot(df[''TestDate''], df[''TurnaroundHours''], label=''Normal'', alpha=0.5)\\n    plt.scatter(df[df[''anomaly''] == -1][''TestDate''], df[df[''anomaly''] == -1][''TurnaroundHours''],\\n                color=''red'', label=''Anomalies'')\\n    plt.title(''Anomaly Detection: Turnaround Hours'')\\n    plt.xlabel(''Test Date'')\\n    plt.ylabel(''Turnaround Hours'')\\n    plt.legend()\\n    plt.tight_layout()\\n    plt.show()\\n'\"}}},\"provider\":{\"expr\":{\"Literal\":{\"Value\":\"'Python'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 566.11,
+          "width": 1192.67,
+          "x": 51.30,
+          "y": 65.95,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Billing Amount Anomalies (Fraud Signals)",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "fc7561b16d1d24e0b653",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"a62ccc4ce1a1277dc25b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.160305343511451,\"y\":0,\"z\":0,\"width\":1271.4503816793895,\"height\":720.0000000000001,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pythonVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"clinic_visits.VisitDate\"},{\"queryRef\":\"Sum(clinic_visits.BillingAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"clinic_visits\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"},\"Name\":\"clinic_visits.VisitDate\",\"NativeReferenceName\":\"Visit Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"BillingAmount\"}},\"Function\":0},\"Name\":\"Sum(clinic_visits.BillingAmount)\",\"NativeReferenceName\":\"Tota Billing Amount\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"VisitDate\"}}}]},\"columnProperties\":{\"Sum(clinic_visits.BillingAmount)\":{\"displayName\":\"Tota Billing Amount\"},\"clinic_visits.VisitDate\":{\"displayName\":\"Visit Date\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"script\":[{\"properties\":{\"source\":{\"expr\":{\"Literal\":{\"Value\":\"'# The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: \\n\\n# dataset = pandas.DataFrame(VisitDate, BillingAmount)\\n# dataset = dataset.drop_duplicates()\\n\\n# Paste or type your script code here:\\n\\n\\n\\nimport pandas as pd\\nimport matplotlib.pyplot as plt\\nfrom sklearn.ensemble import IsolationForest\\n\\ndf = dataset.copy()\\ndf.columns = df.columns.str.strip()\\ndf[''BillingAmount''] = pd.to_numeric(df[''BillingAmount''], errors=''coerce'')\\ndf[''VisitDate''] = pd.to_datetime(df[''VisitDate''], errors=''coerce'')\\ndf = df.dropna(subset=[''BillingAmount'', ''VisitDate''])\\n\\nmodel = IsolationForest(contamination=0.03, random_state=42)\\ndf[''anomaly''] = model.fit_predict(df[[''BillingAmount'']])\\n\\nplt.figure(figsize=(10, 4))\\nplt.plot(df[''VisitDate''], df[''BillingAmount''], label=''Billing Amount'', alpha=0.5)\\nplt.scatter(df[df[''anomaly''] == -1][''VisitDate''], df[df[''anomaly''] == -1][''BillingAmount''], color=''red'', label=''Anomalies'')\\nplt.title(''Anomaly Detection: Billing Amounts'')\\nplt.xlabel(''Visit Date'')\\nplt.ylabel(''Billing Amount (€)'')\\nplt.legend()\\nplt.tight_layout()\\nplt.show()'\"}}},\"provider\":{\"expr\":{\"Literal\":{\"Value\":\"'Python'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.00,
+          "width": 1271.45,
+          "x": 9.16,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Copilot_Theme10643883432929468.json"
+}

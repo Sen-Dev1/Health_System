@@ -1,0 +1,105 @@
+table clinic_patients
+	lineageTag: 6b6413b9-8b25-4b18-87bd-714303f29d30
+	sourceLineageTag: [dbo].[clinic_patients]
+
+	column PatientID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f437c68a-7ed3-4f61-a401-713f7f57a43e
+		sourceLineageTag: PatientID
+		summarizeBy: none
+		sourceColumn: PatientID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FullName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dd7feadc-c4ed-4732-80c0-f75c5d3b6c83
+		sourceLineageTag: FullName
+		summarizeBy: none
+		sourceColumn: FullName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 61ba07d2-900d-4379-937b-ee1bf61fcfc1
+		sourceLineageTag: Gender
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateOfBirth
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 316dc6b8-dee8-4e54-8136-54ae68fbfd06
+		sourceLineageTag: DateOfBirth
+		summarizeBy: none
+		sourceColumn: DateOfBirth
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhoneNumber
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 35feb874-264b-49cd-9738-9e0d763d8924
+		sourceLineageTag: PhoneNumber
+		summarizeBy: none
+		sourceColumn: PhoneNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2f168bcf-cc00-4a25-a1e1-c5efbb51ca8a
+		sourceLineageTag: Email
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: adb2a9c1-72e0-406a-8127-45d684d2acf8
+		sourceLineageTag: Address
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column InsuranceProvider
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ce4e7544-1b7f-46df-b3ff-b7c2ade665cd
+		sourceLineageTag: InsuranceProvider
+		summarizeBy: none
+		sourceColumn: InsuranceProvider
+
+		annotation SummarizationSetBy = Automatic
+
+	column RegisteredDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 0ea9e87a-3b9a-4a5d-94af-cd9f8e257985
+		sourceLineageTag: RegisteredDate
+		summarizeBy: none
+		sourceColumn: RegisteredDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition clinic_patients = entity
+		mode: directLake
+		source
+			entityName: clinic_patients
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

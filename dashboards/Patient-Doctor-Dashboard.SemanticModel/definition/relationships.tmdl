@@ -1,0 +1,12 @@
+relationship AutoDetected_d7598dc6-deed-4bef-ac05-92244af5684d
+	fromColumn: clinic_diagnostics.PatientID
+	toColumn: clinic_patients.PatientID
+
+relationship AutoDetected_54fb4fac-0a24-4589-b1dd-c28f83cbc02f
+	fromColumn: clinic_visits.PatientID
+	toColumn: clinic_patients.PatientID
+
+relationship AutoDetected_279c392e-ce67-4d61-851e-1e39c67f824e
+	fromColumn: clinic_visits.DoctorID
+	toColumn: clinic_doctors.DoctorID
+

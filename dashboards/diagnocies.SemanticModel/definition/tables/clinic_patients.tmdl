@@ -1,0 +1,95 @@
+table clinic_patients
+	lineageTag: eebc25cf-a9e1-4295-b473-5a945f7594a0
+
+	column PatientID
+		dataType: string
+		lineageTag: b5ba88db-ec31-4e0c-b311-29377a53099b
+		summarizeBy: none
+		sourceColumn: PatientID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FullName
+		dataType: string
+		lineageTag: a84ed98a-bdef-4908-ab99-2bbe38d672dd
+		summarizeBy: none
+		sourceColumn: FullName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: 57f56eee-66d9-4f3b-9907-4f6e220ea5c9
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateOfBirth
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cd779df9-6211-41ce-a525-6bc1aed147fd
+		summarizeBy: none
+		sourceColumn: DateOfBirth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column PhoneNumber
+		dataType: string
+		lineageTag: d55cb6ec-a9b8-4ead-aede-a81a414e0e61
+		summarizeBy: none
+		sourceColumn: PhoneNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: 34646e79-c829-4641-921a-1e47426a6e4f
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		lineageTag: 34172329-d55e-45bd-bd2d-5b01346a9fbe
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column InsuranceProvider
+		dataType: string
+		lineageTag: 1f15936f-c0bb-46b0-ac9d-456092bbbd60
+		summarizeBy: none
+		sourceColumn: InsuranceProvider
+
+		annotation SummarizationSetBy = Automatic
+
+	column RegisteredDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 90a29ff8-d1d7-4c40-a149-b84b58143406
+		summarizeBy: none
+		sourceColumn: RegisteredDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition clinic_patients = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\olawa\Team_Analytics Dropbox\ola\PC\Downloads\clinic_patients.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"PatientID", type text}, {"FullName", type text}, {"Gender", type text}, {"DateOfBirth", type date}, {"PhoneNumber", type text}, {"Email", type text}, {"Address", type text}, {"InsuranceProvider", type text}, {"RegisteredDate", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
