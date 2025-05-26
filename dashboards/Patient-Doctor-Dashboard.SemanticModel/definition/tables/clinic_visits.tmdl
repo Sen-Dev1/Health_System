@@ -1,0 +1,93 @@
+table clinic_visits
+	lineageTag: 470f2cf0-bbba-4c14-b05c-c1d7ffc41394
+
+	column VisitID
+		dataType: string
+		lineageTag: 771b0cd2-fc3a-4f03-b037-4d315143c5b2
+		summarizeBy: none
+		sourceColumn: VisitID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PatientID
+		dataType: string
+		lineageTag: 940833b2-8e49-4519-af3c-53a6f23c4f06
+		summarizeBy: none
+		sourceColumn: PatientID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DoctorID
+		dataType: string
+		lineageTag: 93307ad4-c87b-4e7b-83fc-5f91be02b42a
+		summarizeBy: none
+		sourceColumn: DoctorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VisitDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 89184bf3-f54d-4afe-9066-7464da106152
+		summarizeBy: none
+		sourceColumn: VisitDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department
+		dataType: string
+		lineageTag: 89699bc4-770a-4821-9476-91820a853e94
+		summarizeBy: none
+		sourceColumn: Department
+
+		annotation SummarizationSetBy = Automatic
+
+	column Reason
+		dataType: string
+		lineageTag: fbedc6d3-e50f-4f18-815c-b4c4d911e0a0
+		summarizeBy: none
+		sourceColumn: Reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column DurationMinutes
+		dataType: int64
+		formatString: 0
+		lineageTag: 93b274a5-7bd5-49c9-8126-98740b63a70e
+		summarizeBy: sum
+		sourceColumn: DurationMinutes
+
+		annotation SummarizationSetBy = Automatic
+
+	column VisitOutcome
+		dataType: string
+		lineageTag: 4e877e61-d1b4-4f9a-ae4a-7af55ef514d4
+		summarizeBy: none
+		sourceColumn: VisitOutcome
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillingAmount
+		dataType: double
+		lineageTag: 9a360cec-2801-4527-b37f-54af53660443
+		summarizeBy: sum
+		sourceColumn: BillingAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition clinic_visits = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\olawa\Team_Analytics Dropbox\ola\PC\Downloads\clinic_visits.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"VisitID", type text}, {"PatientID", type text}, {"DoctorID", type text}, {"VisitDate", type datetime}, {"Department", type text}, {"Reason", type text}, {"DurationMinutes", Int64.Type}, {"VisitOutcome", type text}, {"BillingAmount", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

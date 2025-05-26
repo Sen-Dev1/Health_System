@@ -1,0 +1,5022 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "clinic_diagnostic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_diagnostics"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clinic diagnostic": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "clinic_diagnostics": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "diagnostic": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "indicative": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "problem-solving": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pinpointing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic.test_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_diagnostics",
+			          "ConceptualProperty": "TestID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "test ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TestID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "test": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "test identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "test identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "test identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "test credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "examination": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "exam": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "investigation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "analysis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "quiz": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic.patient_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_diagnostics",
+			          "ConceptualProperty": "PatientID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "patient ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PatientID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "patient": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "patient identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "patient identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "patient identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "patient credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "enduring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "persevering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "longsuffering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "long-suffering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "forbearing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "good-natured": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic.test_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_diagnostics",
+			          "ConceptualProperty": "TestType"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "test type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TestType": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "test category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "test genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "test manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "test variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "test brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "test class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic.test_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_diagnostics",
+			          "ConceptualProperty": "TestDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "test date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TestDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "test moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "test period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "clinic_diagnostic.result": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_diagnostics",
+			          "ConceptualProperty": "Result"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "result": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "consequence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "upshot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "product": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "effect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "end": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic.performed_by": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_diagnostics",
+			          "ConceptualProperty": "PerformedBy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "performed by": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PerformedBy": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic.lab_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_diagnostics",
+			          "ConceptualProperty": "LabName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lab name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LabName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "lab": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "lab nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "lab title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "lab label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "lab tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "workroom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "laboratory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "workshop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic.turnaround_hour": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_diagnostics",
+			          "ConceptualProperty": "TurnaroundHours"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "turnaround hour": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TurnaroundHours": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "turnaround period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "turnaround era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "turnaround epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "turnaround age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_visit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clinic visit": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "clinic_visits": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "visit": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "clinic appointment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "appointment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "clinic call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "clinic stopover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "stopover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "clinic stay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "clinic holiday": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "clinic vacation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "clinic break": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_visit.visit_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_visits",
+			          "ConceptualProperty": "VisitID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visit ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ID": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "VisitID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "visit": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "visit identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "visit identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "visit identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "visit credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "appointment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "stopover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "stay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "holiday": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "vacation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "clinic_visit.patient_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_visits",
+			          "ConceptualProperty": "PatientID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "patient ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PatientID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "patient": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "patient identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "patient identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "patient identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "patient credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "enduring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "persevering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "longsuffering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "long-suffering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "forbearing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "good-natured": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_visit.doctor_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_visits",
+			          "ConceptualProperty": "DoctorID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "doctor ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DoctorID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "doctor": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "doctor identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "doctor identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "doctor identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "doctor credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "medic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "registrar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "surgeon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "clinician": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "consultant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "GP": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_visit.visit_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_visits",
+			          "ConceptualProperty": "VisitDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visit date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "VisitDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "visit moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "visit period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "clinic_visit.department": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_visits",
+			          "ConceptualProperty": "Department"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "department": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "subdivision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "division": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "unit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "branch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "sector": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "responsibility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "realm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "sphere": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_visit.reason": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_visits",
+			          "ConceptualProperty": "Reason"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reason": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "motivation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "intention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "aim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "motive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "cause": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "purpose": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "object": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "end": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "intelligence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_visit.duration_minute": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_visits",
+			          "ConceptualProperty": "DurationMinutes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "duration minute": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DurationMinutes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "minute": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "miniature": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "infinitesimal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "little": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "small": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "diminutive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "close": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "painstaking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "duration jiffy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "duration moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "duration mo.": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_visit.visit_outcome": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_visits",
+			          "ConceptualProperty": "VisitOutcome"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visit outcome": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "VisitOutcome": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "outcome": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "visit consequence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "visit product": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "visit conclusion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "visit upshot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "visit aftermath": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "visit sequel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "visit aftereffect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "consequence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "product": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "conclusion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_visit.billing_amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_visits",
+			          "ConceptualProperty": "BillingAmount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "billing amount": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "BillingAmount": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "billing quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "billing volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "billing expanse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "billing extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "billing sum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "billing total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "billing aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_doctor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_doctors"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clinic doctor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "clinic_doctors": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "doctor": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "clinic medic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "clinic registrar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "clinic surgeon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "clinic clinician": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "clinic consultant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "clinic GP": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "clinic physician": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "clinic clinic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "clinic practitioner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "medic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_doctor.doctor_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_doctors",
+			          "ConceptualProperty": "DoctorID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "doctor ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ID": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "DoctorID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "doctor": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "doctor identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "doctor identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "doctor identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "doctor credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "medic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "registrar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "surgeon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "clinician": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "consultant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "GP": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "clinic_doctor.full_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_doctors",
+			          "ConceptualProperty": "FullName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "full name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "FullName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "full nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full surname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "complete name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "entire name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "whole name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "full given name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "Doctor's Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "clinic_doctor.specialty": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_doctors",
+			          "ConceptualProperty": "Specialty"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "specialty": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "domain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "field": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "forte": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "sphere": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "subject": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "study": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "discipline": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "specialism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_doctor.email": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_doctors",
+			          "ConceptualProperty": "Email"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "email": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "correspondence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "communication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_doctor.phone_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_doctors",
+			          "ConceptualProperty": "PhoneNumber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "phone number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PhoneNumber": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "phone no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_doctor.years_experience": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_doctors",
+			          "ConceptualProperty": "YearsExperience"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "years experience": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year experience": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "YearsExperience": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "experience": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "year knowledge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "year involvement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "year skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "year familiarity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "year knowhow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "year capability": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "year proficiency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "knowledge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "involvement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_doctor.department": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_doctors",
+			          "ConceptualProperty": "Department"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "department": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "subdivision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "division": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "unit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "branch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "sector": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "responsibility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "realm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "sphere": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_patient": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_patients"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clinic patient": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "clinic_patients": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "patient": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enduring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "persevering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "longsuffering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "long-suffering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "forbearing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "good-natured": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "understanding": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_patient.patient_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_patients",
+			          "ConceptualProperty": "PatientID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "patient ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ID": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "PatientID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "patient": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "patient identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "patient identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "patient identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "patient credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "enduring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "persevering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "longsuffering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "long-suffering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "forbearing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "good-natured": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "clinic_patient.full_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_patients",
+			          "ConceptualProperty": "FullName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "full name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "FullName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "full nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "full surname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "complete name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "entire name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "whole name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "full given name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "Patient's Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "clinic_patient.gender": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_patients",
+			          "ConceptualProperty": "Gender"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gender": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sexuality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "sex": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_patient.date_of_birth": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_patients",
+			          "ConceptualProperty": "DateOfBirth"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date of birth": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DateOfBirth": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "moment of birth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "period of birth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "clinic_patient.phone_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_patients",
+			          "ConceptualProperty": "PhoneNumber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "phone number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PhoneNumber": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "phone no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_patient.email": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_patients",
+			          "ConceptualProperty": "Email"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "email": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "correspondence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "communication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_patient.address": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_patients",
+			          "ConceptualProperty": "Address"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "address": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "residence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "contact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_patient.insurance_provider": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_patients",
+			          "ConceptualProperty": "InsuranceProvider"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "insurance provider": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "InsuranceProvider": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "provider": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "insurance breadwinner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "insurance earner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "insurance worker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "insurance benefactor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "breadwinner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "earner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "worker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "benefactor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "insurance wage-earner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "wage-earner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "clinic_patient.registered_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "clinic_patients",
+			          "ConceptualProperty": "RegisteredDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "registered date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "RegisteredDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "registered moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "registered period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    }
+			  },
+			  "Relationships": {
+			    "clinic_patient_has_phone_number": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        },
+			        "clinic_patient.phone_number": {
+			          "Target": {
+			            "Entity": "clinic_patient.phone_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Object": {
+			              "Role": "clinic_patient.phone_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_patients_have_phone_numbers"
+			        }
+			      ]
+			    },
+			    "clinic_patient_has_date_of_birth": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        },
+			        "clinic_patient.date_of_birth": {
+			          "Target": {
+			            "Entity": "clinic_patient.date_of_birth"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Object": {
+			              "Role": "clinic_patient.date_of_birth"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_patients_have_date_of_birth"
+			        }
+			      ]
+			    },
+			    "clinic_patient_has_gender": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        },
+			        "clinic_patient.gender": {
+			          "Target": {
+			            "Entity": "clinic_patient.gender"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Object": {
+			              "Role": "clinic_patient.gender"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_patients_have_genders"
+			        }
+			      ]
+			    },
+			    "clinic_patient_has_full_name": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        },
+			        "clinic_patient.full_name": {
+			          "Target": {
+			            "Entity": "clinic_patient.full_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Object": {
+			              "Role": "clinic_patient.full_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_patients_have_full_names"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Name": {
+			              "Role": "clinic_patient.full_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "full_names_are_names_IDs_of_clinic_patients"
+			        }
+			      ]
+			    },
+			    "clinic_patient_has_patient_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        },
+			        "clinic_patient.patient_ID": {
+			          "Target": {
+			            "Entity": "clinic_patient.patient_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Object": {
+			              "Role": "clinic_patient.patient_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_patients_have_patient_ID"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Name": {
+			              "Role": "clinic_patient.patient_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "patient_ID_are_names_IDs_of_clinic_patients"
+			        }
+			      ]
+			    },
+			    "clinic_doctor_has_department": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_doctors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_doctor": {
+			          "Target": {
+			            "Entity": "clinic_doctor"
+			          }
+			        },
+			        "clinic_doctor.department": {
+			          "Target": {
+			            "Entity": "clinic_doctor.department"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_doctor"
+			            },
+			            "Object": {
+			              "Role": "clinic_doctor.department"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_doctors_have_departments"
+			        }
+			      ]
+			    },
+			    "clinic_doctor_has_years_experience": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_doctors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_doctor": {
+			          "Target": {
+			            "Entity": "clinic_doctor"
+			          }
+			        },
+			        "clinic_doctor.years_experience": {
+			          "Target": {
+			            "Entity": "clinic_doctor.years_experience"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_doctor"
+			            },
+			            "Object": {
+			              "Role": "clinic_doctor.years_experience"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_doctors_have_years_experiences"
+			        }
+			      ]
+			    },
+			    "clinic_doctor_has_phone_number": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_doctors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_doctor": {
+			          "Target": {
+			            "Entity": "clinic_doctor"
+			          }
+			        },
+			        "clinic_doctor.phone_number": {
+			          "Target": {
+			            "Entity": "clinic_doctor.phone_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_doctor"
+			            },
+			            "Object": {
+			              "Role": "clinic_doctor.phone_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_doctors_have_phone_numbers"
+			        }
+			      ]
+			    },
+			    "clinic_doctor_has_email": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_doctors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_doctor": {
+			          "Target": {
+			            "Entity": "clinic_doctor"
+			          }
+			        },
+			        "clinic_doctor.email": {
+			          "Target": {
+			            "Entity": "clinic_doctor.email"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_doctor"
+			            },
+			            "Object": {
+			              "Role": "clinic_doctor.email"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_doctors_have_emails"
+			        }
+			      ]
+			    },
+			    "clinic_doctor_has_specialty": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_doctors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_doctor": {
+			          "Target": {
+			            "Entity": "clinic_doctor"
+			          }
+			        },
+			        "clinic_doctor.specialty": {
+			          "Target": {
+			            "Entity": "clinic_doctor.specialty"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_doctor"
+			            },
+			            "Object": {
+			              "Role": "clinic_doctor.specialty"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_doctors_have_specialties"
+			        }
+			      ]
+			    },
+			    "clinic_doctor_has_full_name": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_doctors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_doctor": {
+			          "Target": {
+			            "Entity": "clinic_doctor"
+			          }
+			        },
+			        "clinic_doctor.full_name": {
+			          "Target": {
+			            "Entity": "clinic_doctor.full_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_doctor"
+			            },
+			            "Object": {
+			              "Role": "clinic_doctor.full_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_doctors_have_full_names"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "clinic_doctor"
+			            },
+			            "Name": {
+			              "Role": "clinic_doctor.full_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "full_names_are_names_IDs_of_clinic_doctors"
+			        }
+			      ]
+			    },
+			    "clinic_doctor_has_doctor_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_doctors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_doctor": {
+			          "Target": {
+			            "Entity": "clinic_doctor"
+			          }
+			        },
+			        "clinic_doctor.doctor_ID": {
+			          "Target": {
+			            "Entity": "clinic_doctor.doctor_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_doctor"
+			            },
+			            "Object": {
+			              "Role": "clinic_doctor.doctor_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_doctors_have_doctor_ID"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "clinic_doctor"
+			            },
+			            "Name": {
+			              "Role": "clinic_doctor.doctor_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "doctor_ID_are_names_IDs_of_clinic_doctors"
+			        }
+			      ]
+			    },
+			    "clinic_visit_has_billing_amount": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_visit": {
+			          "Target": {
+			            "Entity": "clinic_visit"
+			          }
+			        },
+			        "clinic_visit.billing_amount": {
+			          "Target": {
+			            "Entity": "clinic_visit.billing_amount"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_visit"
+			            },
+			            "Object": {
+			              "Role": "clinic_visit.billing_amount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_visits_have_billing_amounts"
+			        }
+			      ]
+			    },
+			    "clinic_visit_has_visit_outcome": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_visit": {
+			          "Target": {
+			            "Entity": "clinic_visit"
+			          }
+			        },
+			        "clinic_visit.visit_outcome": {
+			          "Target": {
+			            "Entity": "clinic_visit.visit_outcome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_visit"
+			            },
+			            "Object": {
+			              "Role": "clinic_visit.visit_outcome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_visits_have_visit_outcomes"
+			        }
+			      ]
+			    },
+			    "clinic_visit_has_duration_minute": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_visit": {
+			          "Target": {
+			            "Entity": "clinic_visit"
+			          }
+			        },
+			        "clinic_visit.duration_minute": {
+			          "Target": {
+			            "Entity": "clinic_visit.duration_minute"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_visit"
+			            },
+			            "Object": {
+			              "Role": "clinic_visit.duration_minute"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_visits_have_duration_minutes"
+			        }
+			      ]
+			    },
+			    "clinic_visit_has_reason": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_visit": {
+			          "Target": {
+			            "Entity": "clinic_visit"
+			          }
+			        },
+			        "clinic_visit.reason": {
+			          "Target": {
+			            "Entity": "clinic_visit.reason"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_visit"
+			            },
+			            "Object": {
+			              "Role": "clinic_visit.reason"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_visits_have_reasons"
+			        }
+			      ]
+			    },
+			    "clinic_visit_has_department": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_visit": {
+			          "Target": {
+			            "Entity": "clinic_visit"
+			          }
+			        },
+			        "clinic_visit.department": {
+			          "Target": {
+			            "Entity": "clinic_visit.department"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_visit"
+			            },
+			            "Object": {
+			              "Role": "clinic_visit.department"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_visits_have_departments"
+			        }
+			      ]
+			    },
+			    "clinic_visit_has_visit_date": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_visit": {
+			          "Target": {
+			            "Entity": "clinic_visit"
+			          }
+			        },
+			        "clinic_visit.visit_date": {
+			          "Target": {
+			            "Entity": "clinic_visit.visit_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_visit"
+			            },
+			            "Object": {
+			              "Role": "clinic_visit.visit_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_visits_have_visit_dates"
+			        }
+			      ]
+			    },
+			    "clinic_visit_has_visit_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_visit": {
+			          "Target": {
+			            "Entity": "clinic_visit"
+			          }
+			        },
+			        "clinic_visit.visit_ID": {
+			          "Target": {
+			            "Entity": "clinic_visit.visit_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_visit"
+			            },
+			            "Object": {
+			              "Role": "clinic_visit.visit_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_visits_have_visit_ID"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "clinic_visit"
+			            },
+			            "Name": {
+			              "Role": "clinic_visit.visit_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "visit_ID_are_names_IDs_of_clinic_visits"
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic_has_turnaround_hour": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_diagnostics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_diagnostic": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic"
+			          }
+			        },
+			        "clinic_diagnostic.turnaround_hour": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic.turnaround_hour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_diagnostic"
+			            },
+			            "Object": {
+			              "Role": "clinic_diagnostic.turnaround_hour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_diagnostics_have_turnaround_hours"
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic_has_lab_name": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_diagnostics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_diagnostic": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic"
+			          }
+			        },
+			        "clinic_diagnostic.lab_name": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic.lab_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_diagnostic"
+			            },
+			            "Object": {
+			              "Role": "clinic_diagnostic.lab_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_diagnostics_have_lab_names"
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic_has_performed_by": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_diagnostics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_diagnostic": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic"
+			          }
+			        },
+			        "clinic_diagnostic.performed_by": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic.performed_by"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_diagnostic"
+			            },
+			            "Object": {
+			              "Role": "clinic_diagnostic.performed_by"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_diagnostics_have_performed_by"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "clinic_diagnostic.performed_by"
+			            },
+			            "Verbs": [
+			              {
+			                "perform": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "clinic_diagnostic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "performed_by_perform_clinic_diagnostics"
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic_has_result": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_diagnostics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_diagnostic": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic"
+			          }
+			        },
+			        "clinic_diagnostic.result": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic.result"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_diagnostic"
+			            },
+			            "Object": {
+			              "Role": "clinic_diagnostic.result"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_diagnostics_have_results"
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic_has_test_date": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_diagnostics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_diagnostic": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic"
+			          }
+			        },
+			        "clinic_diagnostic.test_date": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic.test_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_diagnostic"
+			            },
+			            "Object": {
+			              "Role": "clinic_diagnostic.test_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_diagnostics_have_test_dates"
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic_has_test_type": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_diagnostics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_diagnostic": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic"
+			          }
+			        },
+			        "clinic_diagnostic.test_type": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic.test_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_diagnostic"
+			            },
+			            "Object": {
+			              "Role": "clinic_diagnostic.test_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_diagnostics_have_test_types"
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic_has_test_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_diagnostics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_diagnostic": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic"
+			          }
+			        },
+			        "clinic_diagnostic.test_ID": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic.test_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_diagnostic"
+			            },
+			            "Object": {
+			              "Role": "clinic_diagnostic.test_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_diagnostics_have_test_ID"
+			        }
+			      ]
+			    },
+			    "clinic_patient_in_address": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        },
+			        "clinic_patient.address": {
+			          "Target": {
+			            "Entity": "clinic_patient.address"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "clinic_patient.address"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "clinic_patient.address"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_patients_are_in_addresses"
+			        }
+			      ]
+			    },
+			    "clinic_patient_is_born_on_date_of_birth": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        },
+			        "clinic_patient.date_of_birth": {
+			          "Target": {
+			            "Entity": "clinic_patient.date_of_birth"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "clinic_patient.date_of_birth"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "bear": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "clinic_patient"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "clinic_patients_are_born_on_date_of_birth"
+			        }
+			      ]
+			    },
+			    "clinic_patient_is_registered_on_registered_date": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        },
+			        "clinic_patient.registered_date": {
+			          "Target": {
+			            "Entity": "clinic_patient.registered_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "clinic_patient.registered_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "register": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "clinic_patient"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "clinic_patients_are_registered_on_registered_dates"
+			        }
+			      ]
+			    },
+			    "clinic_visit_is_visited_on_visit_date": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_visit": {
+			          "Target": {
+			            "Entity": "clinic_visit"
+			          }
+			        },
+			        "clinic_visit.visit_date": {
+			          "Target": {
+			            "Entity": "clinic_visit.visit_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "clinic_visit.visit_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "visit": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "clinic_visit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "clinic_visits_are_visited_on_visit_dates"
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic_is_tested_on_test_date": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_diagnostics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_diagnostic": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic"
+			          }
+			        },
+			        "clinic_diagnostic.test_date": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic.test_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "clinic_diagnostic.test_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "test": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "clinic_diagnostic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "clinic_diagnostics_are_tested_on_test_dates"
+			        }
+			      ]
+			    },
+			    "clinic_patient_insurance_provider_provide_clinic_patient": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_patient.insurance_provider": {
+			          "Target": {
+			            "Entity": "clinic_patient.insurance_provider"
+			          }
+			        },
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "clinic_patient.insurance_provider"
+			            },
+			            "Verbs": [
+			              {
+			                "provide": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "clinic_patient"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "insurance_providers_provide_clinic_patients"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_patient.insurance_provider"
+			            },
+			            "Object": {
+			              "Role": "clinic_patient"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "insurance_providers_have_clinic_patients"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Object": {
+			              "Role": "clinic_patient.insurance_provider"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_patients_have_insurance_providers"
+			        }
+			      ]
+			    },
+			    "clinic_patient_has_email": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        },
+			        "clinic_patient.email": {
+			          "Target": {
+			            "Entity": "clinic_patient.email"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Object": {
+			              "Role": "clinic_patient.email"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_patients_have_emails"
+			        }
+			      ]
+			    },
+			    "clinic_patient_has_address": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        },
+			        "clinic_patient.address": {
+			          "Target": {
+			            "Entity": "clinic_patient.address"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Object": {
+			              "Role": "clinic_patient.address"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_patients_have_addresses"
+			        }
+			      ]
+			    },
+			    "clinic_patient_has_registered_date": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        },
+			        "clinic_patient.registered_date": {
+			          "Target": {
+			            "Entity": "clinic_patient.registered_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Object": {
+			              "Role": "clinic_patient.registered_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_patients_have_registered_dates"
+			        }
+			      ]
+			    },
+			    "clinic_diagnostic_has_clinic_patient": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_diagnostics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_diagnostic": {
+			          "Target": {
+			            "Entity": "clinic_diagnostic"
+			          }
+			        },
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_diagnostic"
+			            },
+			            "Object": {
+			              "Role": "clinic_patient"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_diagnostics_have_clinic_patients"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Object": {
+			              "Role": "clinic_diagnostic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_patients_have_clinic_diagnostics"
+			        }
+			      ]
+			    },
+			    "clinic_visit_has_clinic_patient": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_visit": {
+			          "Target": {
+			            "Entity": "clinic_visit"
+			          }
+			        },
+			        "clinic_patient": {
+			          "Target": {
+			            "Entity": "clinic_patient"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_visit"
+			            },
+			            "Object": {
+			              "Role": "clinic_patient"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_visits_have_clinic_patients"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_patient"
+			            },
+			            "Object": {
+			              "Role": "clinic_visit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_patients_have_clinic_visits"
+			        }
+			      ]
+			    },
+			    "clinic_visit_has_clinic_doctor": {
+			      "Binding": {
+			        "ConceptualEntity": "clinic_visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "clinic_visit": {
+			          "Target": {
+			            "Entity": "clinic_visit"
+			          }
+			        },
+			        "clinic_doctor": {
+			          "Target": {
+			            "Entity": "clinic_doctor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_visit"
+			            },
+			            "Object": {
+			              "Role": "clinic_doctor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_visits_have_clinic_doctors"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "clinic_doctor"
+			            },
+			            "Object": {
+			              "Role": "clinic_visit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clinic_doctors_have_clinic_visits"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

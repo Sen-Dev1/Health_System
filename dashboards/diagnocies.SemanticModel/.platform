@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "diagnocies"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "421e506f-9603-aa63-49ca-ce7926a57e30"
+  }
+}

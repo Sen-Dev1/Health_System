@@ -1,0 +1,74 @@
+table clinic_doctors
+	lineageTag: 2e4dfcc0-35ec-450c-9d6f-a675e804c686
+
+	column DoctorID
+		dataType: string
+		lineageTag: 8cfeb1a0-91ca-4297-9146-d6df90fab300
+		summarizeBy: none
+		sourceColumn: DoctorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FullName
+		dataType: string
+		lineageTag: 9c4d62f3-8673-4dad-894b-71f27773ed7d
+		summarizeBy: none
+		sourceColumn: FullName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Specialty
+		dataType: string
+		lineageTag: 0a868d74-56ee-4859-97df-1e4b51926b16
+		summarizeBy: none
+		sourceColumn: Specialty
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: 18730cbe-723c-4e8c-b368-ec6595907c25
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhoneNumber
+		dataType: string
+		lineageTag: 1903aa71-e068-49c7-b54a-8a09f28b15dc
+		summarizeBy: none
+		sourceColumn: PhoneNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearsExperience
+		dataType: int64
+		formatString: 0
+		lineageTag: 74ebef11-1a38-4d2b-bc7f-cfb71aa9c403
+		summarizeBy: none
+		sourceColumn: YearsExperience
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department
+		dataType: string
+		lineageTag: c99d2f52-2a6e-4088-83b1-e2c30e7c9568
+		summarizeBy: none
+		sourceColumn: Department
+
+		annotation SummarizationSetBy = Automatic
+
+	partition clinic_doctors = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\olawa\Team_Analytics Dropbox\ola\PC\Downloads\clinic_doctors.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DoctorID", type text}, {"FullName", type text}, {"Specialty", type text}, {"Email", type text}, {"PhoneNumber", type text}, {"YearsExperience", Int64.Type}, {"Department", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

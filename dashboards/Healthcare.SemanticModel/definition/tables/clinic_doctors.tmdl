@@ -1,0 +1,84 @@
+table clinic_doctors
+	lineageTag: 4abb0363-15b3-49bf-97fc-b61641dbeced
+	sourceLineageTag: [dbo].[clinic_doctors]
+
+	column DoctorID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1b5c5a50-2b09-4b00-9cda-4c1d4001ac00
+		sourceLineageTag: DoctorID
+		summarizeBy: none
+		sourceColumn: DoctorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FullName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8773fc9b-a0bf-4d91-8bbc-4499abd6ead4
+		sourceLineageTag: FullName
+		summarizeBy: none
+		sourceColumn: FullName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Specialty
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: caeae4b1-b090-4977-bb1a-172bde3495d1
+		sourceLineageTag: Specialty
+		summarizeBy: none
+		sourceColumn: Specialty
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e22f5b7d-d8f4-4f3d-848e-5a4d6305d2da
+		sourceLineageTag: Email
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhoneNumber
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fa4d7832-1d77-4cfc-bacf-39e19845b2c9
+		sourceLineageTag: PhoneNumber
+		summarizeBy: none
+		sourceColumn: PhoneNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearsExperience
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 95c7e9cc-e033-4257-b4b1-40639a5dc4aa
+		sourceLineageTag: YearsExperience
+		summarizeBy: none
+		sourceColumn: YearsExperience
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6b987d61-d4c7-4ec2-9d08-76529a0e511a
+		sourceLineageTag: Department
+		summarizeBy: none
+		sourceColumn: Department
+
+		annotation SummarizationSetBy = Automatic
+
+	partition clinic_doctors = entity
+		mode: directLake
+		source
+			entityName: clinic_doctors
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,12 @@
+relationship 16595d87-1540-25ed-7a9c-4878e8a90c7b
+	fromColumn: clinic_visits.PatientID
+	toColumn: clinic_patients.PatientID
+
+relationship eadef658-bf64-f866-db53-c02e3fc3cbc9
+	fromColumn: clinic_visits.DoctorID
+	toColumn: clinic_doctors.DoctorID
+
+relationship 6d2e22df-d5df-a581-e36d-113a70a72ce7
+	fromColumn: clinic_diagnostics.PatientID
+	toColumn: clinic_patients.PatientID
+
